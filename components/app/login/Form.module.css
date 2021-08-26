@@ -64,3 +64,15 @@
   border: 1px solid #b94a4a;
   background-color: #fddddd;
 }
+
+@media (max-width: 420px) {
+  .form {
+    padding: 0.7rem;
+  }
+  .input,
+  .button {
+    font-size: 16px;
+    padding: 0.6rem 1.7rem;
+    margin-bottom: 0.7rem;
+  }
+}
