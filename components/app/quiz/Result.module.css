@@ -1,0 +1,29 @@
+.result {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 3;
+  letter-spacing: 1px;
+}
+
+.stats {
+  padding: 1rem 2rem;
+  border-bottom: 2px #ddd solid;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+}
+
+@media (max-width: 675px) {
+  .result {
+    flex-direction: column;
+    line-height: 2.5;
+  }
+
+  .stats {
+    padding: 1rem;
+  }
+}

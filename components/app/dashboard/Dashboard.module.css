@@ -1,0 +1,124 @@
+.main {
+  margin: 8vmin;
+  display: flex;
+  flex-direction: column;
+  color: #555;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 59%;
+  border-radius: 2rem;
+  background-color: rgb(168, 202, 255);
+}
+
+.position {
+  margin-left: 4vmin;
+}
+
+.user {
+  position: relative;
+  width: 35%;
+  border-radius: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 7px #777;
+  z-index: 10;
+}
+
+.user figure {
+  margin: 7vmin 3vmin;
+  height: 70%;
+  line-height: 1.5;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.quote {
+  display: block;
+  position: absolute;
+  top: 3vmin;
+  left: 3vmin;
+}
+
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  max-height: 50vh;
+}
+
+.main h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.main h1 {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.position span {
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 920px) {
+  .main h1 {
+    font-size: 3.5rem;
+  }
+  .position span {
+    font-size: 3rem;
+  }
+  .position h2 {
+    font-size: 1.5rem;
+  }
+  .user figure {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin: 4vmin;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .status,
+  .user {
+    width: 85%;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .status,
+  .user {
+    width: 100%;
+  }
+
+  .quote {
+    display: none;
+  }
+
+  .position h2 {
+    font-size: 1.2rem;
+  }
+
+  .position span {
+    font-size: 2.5rem;
+  }
+}

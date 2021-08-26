@@ -1,0 +1,48 @@
+.table {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-collapse: collapse;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.table td {
+  width: 100%;
+  padding: 0.7rem;
+  border-bottom: 1px #ccc solid;
+}
+
+.table td:first-child {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.about_table {
+  margin-top: 2vmin;
+  box-shadow: 0 0 5px #ddd;
+}
+
+.contact_table {
+  height: 90%;
+}
+
+.contact_table td:nth-child(2) {
+  text-transform: initial;
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 14px;
+  }
+
+  .table td {
+    padding: 0.4rem;
+  }
+
+  .contact_table {
+    height: 80%;
+  }
+}

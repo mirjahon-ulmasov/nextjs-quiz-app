@@ -1,0 +1,167 @@
+.page {
+  position: relative;
+  height: 100%;
+  display: flex;
+  color: #333;
+  flex-direction: column;
+  letter-spacing: 1px;
+  padding: 6vmin;
+}
+
+.title {
+  padding: 3vmin;
+  margin-bottom: 4vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0 10px #777;
+}
+
+.title h1 {
+  font-weight: 300;
+}
+
+.buttons {
+  display: flex;
+  transform: scale(0.9);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  height: 80%;
+  padding: 4vmin;
+  border-radius: 1.5rem;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4vmin;
+  width: 48%;
+  border-radius: 1.5rem;
+  background: #fcfcfc;
+  box-shadow: 0 0 10px #777;
+}
+
+.image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.image img {
+  border-radius: 50%;
+}
+
+.female {
+  filter: brightness(90%);
+}
+
+.info {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact,
+.experience {
+  border-radius: 1.5rem;
+  height: 55%;
+  padding: 3vmin 2vmin;
+  background: #fcfcfc;
+  box-shadow: 0 0 10px #777;
+}
+
+.contact {
+  height: 40%;
+}
+
+.info h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 300;
+  color: #bbb;
+  text-transform: uppercase;
+}
+
+.info h3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 9px;
+  width: 7vw;
+  margin-left: 1rem;
+  border-bottom: 1px #bbb solid;
+}
+
+.experience ul {
+  height: 42%;
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.experience ul li {
+  list-style: none;
+  padding: 0.4rem 0.7rem;
+}
+
+@media (max-width: 1024px) {
+  .image .buttons {
+    position: absolute;
+    bottom: 0;
+    right: -1.5rem;
+  }
+  .info h3 {
+    font-size: 16px;
+  }
+  .info h3::before {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+    height: initial;
+  }
+  .info {
+    width: 100%;
+    height: 60%;
+  }
+  .about {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 40%;
+  }
+  .image img {
+    width: 25vw;
+  }
+  .info h3 {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 15px;
+    flex-direction: column;
+    padding: 0.5rem;
+    align-items: center;
+  }
+  .title .buttons {
+    transform: scale(0.7);
+  }
+}

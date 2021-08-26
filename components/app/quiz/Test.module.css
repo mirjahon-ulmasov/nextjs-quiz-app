@@ -1,0 +1,40 @@
+.main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #444;
+}
+
+.clock {
+  position: relative;
+}
+
+.timer {
+  position: absolute;
+  bottom: 0;
+  right: -30vw;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 24px;
+  color: #fff;
+  background-color: #fa4848;
+  box-shadow: 0 0 5px 3px #ffbaba;
+}
+
+.button {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px), screen and (max-height: 540px) {
+  .timer {
+    right: -38vw;
+    bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .timer {
+    right: -35vw;
+  }
+}

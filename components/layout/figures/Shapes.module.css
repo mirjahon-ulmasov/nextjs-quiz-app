@@ -1,0 +1,32 @@
+.shapes {
+  position: fixed;
+  background-color: #000;
+  opacity: 0.1;
+  min-width: 60vmin;
+  min-height: 60vmin;
+}
+
+.rectangle_1 {
+  transform: rotate(45deg);
+  bottom: -15vmin;
+  left: -15vmin;
+}
+
+.rectangle_2 {
+  transform: rotate(60deg);
+  top: -35vmin;
+  left: 5vmin;
+}
+
+.circle {
+  border-radius: 50%;
+  top: -15vmin;
+  right: -15vmin;
+}
+
+.triangle {
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  transform: rotate(10deg);
+  bottom: 3vmax;
+  left: 55vmax;
+}

@@ -1,0 +1,83 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 9.5rem;
+  width: 89%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(1px);
+}
+
+.modal {
+  position: absolute;
+  left: 18%;
+  border-radius: 1rem;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.backdrop.primary {
+  z-index: 30;
+}
+.modal.primary {
+  z-index: 40;
+}
+.backdrop.secondary {
+  z-index: 10;
+}
+.modal.secondary {
+  z-index: 20;
+}
+.modal.top {
+  top: 8vmin;
+  padding: 2rem 1rem;
+}
+.modal.center {
+  top: 20vmin;
+  width: 60%;
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .modal.center,
+  .modal.top {
+    left: 5%;
+    width: 90%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px), (max-height: 540px) {
+  .backdrop {
+    left: 5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .modal {
+    padding: 1rem;
+    font-size: 15px;
+  }
+}

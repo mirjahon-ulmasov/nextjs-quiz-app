@@ -1,0 +1,25 @@
+.message {
+  position: fixed;
+  top: 0;
+  left: 9.5rem;
+  width: 100vw;
+  color: #fff;
+  background-color: #69a2ff;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.error {
+  background-color: #ff6a6a;
+}
+
+.success {
+  background-color: #5bca68;
+}
+
+@media (max-width: 768px), (max-height: 540px) {
+  .message {
+    left: 80px;
+    font-size: 17px;
+  }
+}

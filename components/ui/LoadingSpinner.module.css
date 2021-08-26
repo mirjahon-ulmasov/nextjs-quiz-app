@@ -1,0 +1,23 @@
+.loading {
+  position: absolute;
+  top: 40vh;
+  left: 35vw;
+  width: 4rem;
+  height: 4rem;
+  border: 4px rgb(105, 162, 255) solid;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (max-width: 420px) {
+  .loading {
+    left: 30vw;
+  }
+}
