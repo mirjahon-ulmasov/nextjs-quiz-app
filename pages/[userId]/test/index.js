@@ -38,7 +38,7 @@ export async function getStaticPaths() {
 
   return {
     paths: params,
-    fallback: false,
+    fallback: 'blocking',
   };
 }
 
@@ -69,6 +69,6 @@ export async function getStaticProps(context) {
         details: registeredUser.details,
       },
     },
-    revalidate: 5,
+    revalidate: 2,
   };
 }

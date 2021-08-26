@@ -4,67 +4,6 @@ import Head from 'next/head';
 import Dashboard from '../../../components/app/dashboard/Dashboard';
 import Layout from '../../../components/layout/Layout';
 
-// const DUMMY_USERS = [
-//   {
-//     id: Math.random().toString(),
-//     name: 'Mirjahon',
-//     score: 86,
-//     date: new Date(),
-//     level: 'Medium',
-//     time: 44,
-//   },
-
-//   {
-//     id: Math.random().toString(),
-//     name: 'Nodira',
-//     score: 100,
-//     date: new Date(),
-//     level: 'Hard',
-//     time: 124,
-//   },
-//   {
-//     id: Math.random().toString(),
-//     name: 'Shahzoda',
-//     score: 75,
-//     date: new Date(),
-//     level: 'Easy',
-//     time: 64,
-//   },
-//   {
-//     id: Math.random().toString(),
-//     name: 'Mirhamid',
-//     score: 50,
-//     date: new Date(),
-//     level: 'Medium',
-//     time: 44,
-//   },
-
-//   {
-//     id: Math.random().toString(),
-//     name: 'Nusrat',
-//     score: 45,
-//     date: new Date(),
-//     level: 'Hard',
-//     time: 124,
-//   },
-//   {
-//     id: Math.random().toString(),
-//     name: 'Shuhrat',
-//     score: 62,
-//     date: new Date(),
-//     level: 'Easy',
-//     time: 64,
-//   },
-//   {
-//     id: Math.random().toString(),
-//     name: 'Sevara',
-//     score: 99,
-//     date: new Date(),
-//     level: 'Easy',
-//     time: 64,
-//   },
-// ];
-
 export default function DashboardPage(props) {
   return (
     <Layout id={props.registeredUser.id}>
@@ -87,7 +26,6 @@ export async function getStaticPaths() {
   const userCollection = client.db('quiz').collection('user_list');
 
   const users = await userCollection.find().toArray();
-
   client.close();
 
   const params = users.map(user => {
@@ -100,7 +38,7 @@ export async function getStaticPaths() {
 
   return {
     paths: params,
-    fallback: false,
+    fallback: 'blocking',
   };
 }
 
@@ -144,6 +82,6 @@ export async function getStaticProps(context) {
         details: registeredUser.details,
       },
     },
-    revalidate: 5,
+    revalidate: 2,
   };
 }
