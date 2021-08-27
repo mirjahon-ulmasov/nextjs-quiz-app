@@ -24,6 +24,12 @@
   }
 
   .stats {
-    padding: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .buttons {
+    transform: scale(0.7);
   }
 }
