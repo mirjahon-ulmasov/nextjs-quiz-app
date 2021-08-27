@@ -1,4 +1,5 @@
 import { MongoClient } from 'mongodb';
+import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 import Head from 'next/head';
 
@@ -6,16 +7,16 @@ import Register from '../../components/app/login/Register';
 import SignUp from '../../components/app/login/SignUp';
 
 export default function RegisterPage(props) {
-  // const router = useRouter();
+  const router = useRouter();
 
   const addUserHandler = async enteredUser => {
     fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify(enteredUser),
       headers: { 'Content-Type': 'application/json' },
-    }).then(response => response.json());
-    // When you registered you pushed to your console
-    //   .then(response => router.push(`/${response.id}/test`));
+    })
+      .then(response => response.json())
+      .then(response => router.push(`/${response.id}`));
   };
 
   return (

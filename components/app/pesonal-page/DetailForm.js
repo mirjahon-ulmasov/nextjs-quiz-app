@@ -47,7 +47,7 @@ export default function DetialForm(props) {
       setTimeout(() => {
         props.onNotification(null);
         router.reload(window.location.pathname);
-      }, 5000);
+      }, 3000);
     } else {
       props.onNotification(
         <Notification className="error">

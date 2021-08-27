@@ -39,7 +39,9 @@ export async function getStaticProps() {
         return {
           id: user._id.toString(),
           name: user.name,
+          email: user.email,
           password: user.password,
+          date: user.date,
           score: user.score,
           time: user.time,
           details: user.details,

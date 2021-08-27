@@ -79,7 +79,7 @@ export default function Personal(props) {
       setTimeout(() => {
         setNotification(null);
         router.push('/');
-      }, 2500);
+      }, 3000);
     } else {
       setNotification(
         <Notification className="error">

@@ -8,6 +8,13 @@ export default async function handler(req, res) {
   );
   const userCollection = client.db('quiz').collection('user_list');
 
+  if (req.method === 'GET') {
+    const users = await userCollection.find().toArray();
+
+    client.close();
+    res.status(201).json(users);
+  }
+
   if (req.method === 'POST') {
     const result = await userCollection.insertOne(data);
 

@@ -3,13 +3,11 @@ import Image from 'next/image';
 import { useRef, useState } from 'react';
 
 import classes from './Form.module.css';
-import { useRouter } from 'next/router';
 
 export default function SignUp(props) {
   const [nameClasses, setNameClasses] = useState(classes.input);
   const [emailClasses, setEmailClasses] = useState(classes.input);
 
-  const router = useRouter();
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -71,7 +69,6 @@ export default function SignUp(props) {
       };
 
       props.addUser(user);
-      router.push('/');
     }
   };
 
